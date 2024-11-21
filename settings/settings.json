@@ -1,0 +1,23 @@
+{
+  "materials": [
+    {
+      "name": "ABS",
+      "weight": 1,
+      "cost": 695
+    },
+    {
+      "name": "PETG",
+      "weight": 3,
+      "cost": 1300
+    },
+    {
+      "name": "PLA",
+      "weight": 1.2,
+      "cost": 720
+    }],
+
+  "printerPower": 300, 
+  "electricityCost": 4.3, 
+  "printerDepreciation": 10,
+  "profit": 20 
+}

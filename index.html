@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>3D print calculator</title>
+</head>
+<body>
+  <h1>Расчет стоимости 3д печати</h1>
+
+  <div class="">
+    Время печати, час.:
+    <input type="text" id="printTimeHours">
+  </div>
+
+  <div class="">
+    Время печати, мин.:
+    <input type="text" id="printTimeMinutes">
+  </div>
+
+  <div class="">
+    Вес детали:
+    <input type="text" id="weight">
+  </div>
+
+  <div class="">
+    Материал:
+    <select name="materials" id="materials">
+
+    </select>
+  </div>
+  
+  <div class="">
+    Заработок, %:
+    <input type="text" id="userProfitPercent" placeholder="20%">
+  </div>
+
+  <div class="">
+    Заработок, грн:
+    <input type="text" id="userProfitUAH" placeholder="">
+  </div>
+  <h3>Себестоимость: <span id="withoutProfit">10</span>грн.</h3>
+  <h3>Цена: <span id="printCost">10</span>грн.</h3>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
