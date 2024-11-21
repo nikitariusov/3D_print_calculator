@@ -1,4 +1,5 @@
-const response = await fetch("../settings/settings.json");
+const response = await fetch("https://nikitariusov.github.io/3D_print_calculator/settings/settings.json"
+);
 const settings = await response.json();
 
 const MATERIALS = settings.materials;
