@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>3D print calculator</title>
-</head>
-<body>
-  <h1>Расчет стоимости 3д печати</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>3D print calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">РОЗРАХУНОК ВАРТОСТІ 3D ДРУКУ</h1>
 
-  <div class="">
-    Время печати, час.:
-    <input type="text" id="printTimeHours">
-  </div>
+      <div class="wrapper">
+        <div class="print-parameters">
+          <h3 class="subtitle">ТРИВАЛІСТЬ ДРУКУ</h3>
+          <div class="print-parameters__inner">
+            <div class="print-parameters__hours">
+              <input type="text" id="printTimeHours" placeholder="..." />
+              <p>годин</p>
+            </div>
+            <div class="print-parameters__minutes">
+              <input type="text" id="printTimeMinutes" placeholder="..." />
+              <p>хвилин</p>
+            </div>
+          </div>
+        </div>
 
-  <div class="">
-    Время печати, мин.:
-    <input type="text" id="printTimeMinutes">
-  </div>
+        <div class="detail-weight">
+          <h3 class="subtitle">ВАГА ДЕТАЛІ</h3>
+          <div class="detail-weight__inner">
+            <input type="text" id="weight" placeholder="..." />
+            <p>грамм</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="material">
+          <h3 class="subtitle">МАТЕРІАЛ</h3>
+          <select name="materials" id="materials"></select>
+        </div>
 
-  <div class="">
-    Вес детали:
-    <input type="text" id="weight">
-  </div>
+        <div class="profit">
+          <h3 class="subtitle">ЗАРОБІТОК</h3>
+          <div class="profit__inner">
+            <div class="profit__percent">
+              <input type="text" id="userProfitPercent" placeholder="20" />
+              <p>%</p>
+            </div>
+            <div class="profit__uah">
+              <input type="text" id="userProfitUAH" placeholder="..." />
+              <p>грн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cost__inner">
+        <div class="first-cost">
+          <h3 class="subtitle">СОБІВАРТІСТЬ</h3>
+          <h4 id="withoutProfit">0</h4>
+          <p>грн</p>
+        </div>
+        <div class="cost">
+          <h3 class="subtitle">ВАРТІСТЬ</h3>
+          <h4 id="printCost">0</h4>
+          <p>грн</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="">
-    Материал:
-    <select name="materials" id="materials">
-
-    </select>
-  </div>
-  
-  <div class="">
-    Заработок, %:
-    <input type="text" id="userProfitPercent" placeholder="20%">
-  </div>
-
-  <div class="">
-    Заработок, грн:
-    <input type="text" id="userProfitUAH" placeholder="">
-  </div>
-  <h3>Себестоимость: <span id="withoutProfit">10</span>грн.</h3>
-  <h3>Цена: <span id="printCost">10</span>грн.</h3>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type="module" src="js/main.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
