@@ -1,12 +1,11 @@
-const response = await fetch("https://nikitariusov.github.io/3D_print_calculator/settings/settings.json"
-);
+const response = await fetch("https://nikitariusov.github.io/3D_print_calculator/settings/settings.json");
 const settings = await response.json();
 
 const MATERIALS = settings.materials;
-const PRINTERPOWER = 300;
-const ELECTRICITYCOST = 4.3;
-const PRINTERDEPRECIATION = 10;
-const DEFAULTPROFIT = 20;
+const PRINTERPOWER = +settings.printerPower;
+const ELECTRICITYCOST = +settings.electricityCost;
+const PRINTERDEPRECIATION = +settings.printerDepreciation;
+const DEFAULTPROFIT = +settings.profit;
 
 const materialsName = MATERIALS.map((element) => element.name);
 const materialData = {};
@@ -72,8 +71,6 @@ const calculation = () => {
   }
  
   totalPrintingCost = costOfPrintingWithoutProfit + profit;
-  // console.log(`Profit: ${totalPrintingCost}`);
-  // console.log(printCostElem.data);
 
   userProfitUAHElem.placeholder = profit.toFixed(0);
   if (userProfitUAH) {

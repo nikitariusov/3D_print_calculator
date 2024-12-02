@@ -3,3 +3,145 @@
 *::before{
   box-sizing: border-box;
 }
+
+input{
+  font-size: 36px;
+  max-width: 100px;
+  text-align: center;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.container{
+  max-width: 550px;
+  height: 700px;
+  background-color: aquamarine;
+  margin: 100px auto;
+  border-radius: 50px;
+  padding: 45px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title{
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.print-parameters{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.subtitle{
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.print-parameters__inner{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.print-parameters__hours,
+.print-parameters__minutes {
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-weight {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.material{
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.material .subtitle {
+  margin-bottom: 18px;
+}
+
+.material select {
+  width: 120px;
+  height: 50px;
+  font-size: 28px;
+  padding-left: 11px;
+  background-color: beige;
+  border: none;
+  border-radius: 15px;
+}
+
+.materials__item{
+  font-size: 18px;
+  border: none;
+}
+
+.profit{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.profit__inner{
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.profit__percent,
+.profit__uah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cost__inner{
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.first-cost,
+.cost {
+  padding: 15px 45px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-cost h4,
+.cost h4 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
