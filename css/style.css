@@ -1,10 +1,14 @@
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
 }
 
-input{
+html {
+  background-color: aquamarine;
+}
+
+input {
   font-size: 36px;
   max-width: 100px;
   text-align: center;
@@ -12,12 +16,10 @@ input{
   margin-bottom: 5px;
 }
 
-.container{
+.container {
   max-width: 550px;
   height: 700px;
-  background-color: aquamarine;
   margin: 100px auto;
-  border-radius: 50px;
   padding: 45px;
 
   font-family: "Roboto", sans-serif;
@@ -25,36 +27,38 @@ input{
   font-style: normal;
 }
 
-.title{
+.title {
   font-size: 28px;
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 35px;
+  text-align: center;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 55px;
+  row-gap: 60px;
 }
 
-.print-parameters{
+.print-parameters {
   background-color: #fff;
   border-radius: 20px;
   padding: 10px 15px;
 }
 
-.subtitle{
+.subtitle {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 13px;
   text-align: center;
 }
 
-.print-parameters__inner{
+.print-parameters__inner {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  /* gap: 30px; */
 }
 
 .print-parameters__hours,
@@ -63,6 +67,14 @@ input{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.print-parameters__hours {
+  padding-right: 10px;
+}
+
+.print-parameters__minutes {
+  padding-left: 10px;
 }
 
 .detail-weight {
@@ -75,7 +87,7 @@ input{
   text-align: center;
 }
 
-.material{
+.material {
   background-color: #fff;
   padding: 10px 15px;
   border-radius: 20px;
@@ -98,21 +110,20 @@ input{
   border-radius: 15px;
 }
 
-.materials__item{
+.materials__item {
   font-size: 18px;
   border: none;
 }
 
-.profit{
+.profit {
   background-color: #fff;
   border-radius: 20px;
   padding: 10px 15px;
 }
 
-.profit__inner{
+.profit__inner {
   display: flex;
   justify-content: space-around;
-  gap: 30px;
 }
 
 .profit__percent,
@@ -120,13 +131,20 @@ input{
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100px;
 }
 
-.cost__inner{
+.profit__percent {
+  padding-right: 10px;
+}
+
+.profit__uah {
+  padding-right: 10px;
+}
+
+.cost__inner {
   display: flex;
   justify-content: space-around;
-
-
 }
 
 .first-cost,
@@ -144,4 +162,36 @@ input{
   font-size: 36px;
   font-weight: 400;
   margin-bottom: 5px;
+}
+
+@media screen and (max-device-width: 550px) {
+  .container {
+  margin: 50px auto;
+  padding: 20px;
+  }
+
+  .wrapper{
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-device-width: 475px) {
+  .container {
+  padding: 0px;
+  }
+
+  .wrapper{
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-device-width: 425px) {
+  .container {
+  margin: 10px 0;
+  }
+  .wrapper{
+    flex-direction: column;
+    padding: 0 30px;
+    row-gap: 20px;
+  }
 }
